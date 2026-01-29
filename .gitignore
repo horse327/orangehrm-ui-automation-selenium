@@ -1,0 +1,19 @@
+# Java
+target/
+*.class
+
+# IDE
+.classpath
+.project
+.settings/
+
+# Test output
+test-output/
+screenshots/
+
+# OS
+.DS_Store
+
+# Secrets
+config.properties
+.env
