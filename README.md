@@ -1,38 +1,73 @@
 # OrangeHRM UI Automation (Selenium + TestNG)
 
 ## Overview
-This project is a UI automation framework for testing core functionalities of the OrangeHRM application using Selenium WebDriver and TestNG.
+This repository contains a **UI automation testing framework** for the OrangeHRM application, built using **Selenium WebDriver** and **TestNG** with **Java**.
 
-It is designed following Page Object Model (POM) principles and real-world QA automation best practices.
+The framework follows **Page Object Model (POM)** principles and is designed to reflect **real-world QA automation practices**, focusing on readability, maintainability, and test stability.
+
+It covers both **positive and negative test scenarios** for core OrangeHRM features.
+
+---
 
 ## Tech Stack
-- Java
-- Selenium WebDriver
-- TestNG
-- Maven
+- Java  
+- Selenium WebDriver  
+- TestNG  
+- Maven  
 - Page Object Model (POM)
+
+---
 
 ## Project Structure
 src/test/java
-├── base # WebDriver setup & teardown
-├── pages # Page Object classes
-├── tests # Test scenarios
-├── utils # Config & helpers
+├── base # WebDriver setup, teardown, screenshots on failure
+├── pages # Page Object classes (Login, Admin, PIM)
+├── tests # Test scenarios (positive & negative)
+└── utils # Configuration reader & helpers
+
+
+---
 
 ## Test Scenarios Covered
-- Login (positive & negative)
-- Admin: search user
-- PIM: add employee
-- PIM: delete employee
+### Login
+- Valid login
+- Invalid credentials
+- Empty username/password validation
+
+### Admin Module
+- Search user by username
+
+### PIM Module
+- Add employee
+- Delete employee
+
+---
 
 ## How to Run
 1. Clone the repository
 2. Configure credentials in `config.properties`
 3. Run tests using:
-   - `testng.xml`
-   - or individual TestNG classes
+   - `testng.xml`, or  
+   - Individual TestNG test classes
 
-## Notes
-- Screenshots are captured automatically on test failure
-- Explicit waits are used to reduce flakiness
-- Tests are written with maintainability in mind
+---
+
+## Key Features
+- Page Object Model (POM) implementation
+- Explicit waits to reduce flaky tests
+- Automatic screenshot capture on test failure
+- Clean separation between test logic and page logic
+- Maven-based dependency management
+
+---
+
+## Notes / Limitations
+- Tests rely on OrangeHRM demo data and UI stability
+- Delete employee test removes the first matching record (demo limitation)
+- UI changes in OrangeHRM may require locator updates
+
+---
+
+## Author
+**Azhar Munggaran**  
+QA Engineer | UI & API Automation  
